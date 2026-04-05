@@ -59,7 +59,7 @@ This application follows a client–server model:
 ![Chatroom2](./chatroom2-dosen.png)
 ### Sending File (Undergraduate Student)
 ![File](./file-mahasiswa.png)
-### Sending File (Lecturer)
+### Accepting File (Lecturer)
 ![File](./file-dosen.png)
 
 
