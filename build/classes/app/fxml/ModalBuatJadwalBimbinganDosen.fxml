@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="520.0" prefWidth="645.0" style="-fx-background-color: white; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.ModalBuatJadwalBimbinganDosenController">
+    
+    <children>
+      <Text fill="#037903" layoutX="25.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Hi,">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text fx:id="txtNamaDosen" fill="#037903" layoutX="45.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Dosen!">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Hyperlink layoutX="608.0" layoutY="20.0" onAction="#closeModal" style="-fx-font-weight: bold;" text="X" />
+      <ImageView fitHeight="24.0" fitWidth="27.0" layoutX="25.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/calendar-green.png" />
+         </image>
+      </ImageView>
+      <Text fill="#015401" layoutX="60.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buat Jadwal Bimbingan">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#015401" layoutX="45.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Request Jadwal Mahasiswa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cbMahasiswaBimbingan" layoutX="341.0" layoutY="40.0" prefHeight="25.0" prefWidth="239.0" promptText="Pilih Mahasiswa Bimbingan" style="-fx-background-color: #ebb543;" />
+      <ScrollPane layoutX="25.0" layoutY="100.0" prefHeight="145.0" prefWidth="594.0" style="-fx-background-color: white;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="850.0" prefWidth="577.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox fx:id="cardBimbingan1" alignment="CENTER" layoutX="16.0" prefHeight="119.0" prefWidth="545.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivMahasiswaPertemuan1" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoMahasiswa/mahasiswa1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Text fx:id="txtNamaMahasiswaPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="Adinda Lestari">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <Text fx:id="txtNimMahasiswaPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="2403310947" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                                    <Text fx:id="txtJurusanMahasiswaPertemuan1" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informatika " />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="txtRuanganMahasiswaPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan" />
+                              <Region prefHeight="4.0" prefWidth="246.0" />
+                              <VBox prefHeight="21.0" prefWidth="246.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text fx:id="txtJudulSkripsiMahasiswaPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengaruh Game Virtual Roblox Terhadap Pola Interaksi Anak Gen Z" wrappingWidth="226.595703125">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <Text fx:id="txtJudulPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul" />
+                              <Text fx:id="txtMahasiswaPertemuan1" layoutX="10.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <HBox prefHeight="26.0" prefWidth="199.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnTolakCard1" mnemonicParsing="false" onAction="#TolakJadwal" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: red; -fx-font-weight: bold; -fx-background-radius: 10;" text="Tolak" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnTerimaCard1" mnemonicParsing="false" onAction="#TerimaBimbingan" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #009201; -fx-font-weight: bold; -fx-background-radius: 10;" text="Terima" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/jam.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalMahasiswaPertemuan1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fill="RED" layoutX="47.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                                    <Text fx:id="txtJamMahasiswaPertemuan1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="14:00:00">
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan2" alignment="CENTER" layoutX="16.0" layoutY="140.0" prefHeight="119.0" prefWidth="545.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivMahasiswaPertemuan2" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoMahasiswa/mahasiswa1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Text fx:id="txtNamaMahasiswaPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Adinda Lestari">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <Text fx:id="txtNimMahasiswaPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="2403310947" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                                    <Text fx:id="txtJurusanMahasiswaPertemuan2" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informatika " />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="txtRuanganMahasiswaPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan" />
+                              <Region prefHeight="4.0" prefWidth="246.0" />
+                              <VBox prefHeight="21.0" prefWidth="246.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text fx:id="txtJudulSkripsiMahasiswaPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengaruh Game Virtual Roblox Terhadap Pola Interaksi Anak Gen Z" wrappingWidth="226.595703125">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <Text fx:id="txtJudulPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul" />
+                              <Text fx:id="txtMahasiswaPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <HBox prefHeight="26.0" prefWidth="199.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnTolakCard2" mnemonicParsing="false" onAction="#TolakJadwal" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: red; -fx-font-weight: bold; -fx-background-radius: 10;" text="Tolak" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnTerimaCard2" mnemonicParsing="false" onAction="#TerimaBimbingan" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #009201; -fx-font-weight: bold; -fx-background-radius: 10;" text="Terima" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/jam.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalMahasiswaPertemuan2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin></Text>
+                                    <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                                    <Text fx:id="txtJamMahasiswaPertemuan2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="14:00:00">
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan3" alignment="CENTER" layoutX="16.0" layoutY="275.0" prefHeight="119.0" prefWidth="545.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivMahasiswaPertemuan3" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoMahasiswa/mahasiswa1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Text fx:id="txtNamaMahasiswaPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Adinda Lestari">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <Text fx:id="txtNimMahasiswaPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="2403310947" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                                    <Text fx:id="txtJurusanMahasiswaPertemuan3" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informatika " />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="txtRuanganMahasiswaPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan" />
+                              <Region prefHeight="4.0" prefWidth="246.0" />
+                              <VBox prefHeight="21.0" prefWidth="246.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text fx:id="txtJudulSkripsiMahasiswaPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengaruh Game Virtual Roblox Terhadap Pola Interaksi Anak Gen Z" wrappingWidth="226.595703125">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <Text fx:id="txtJudulPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul" />
+                              <Text fx:id="txtMahasiswaPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <HBox prefHeight="26.0" prefWidth="199.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnTolakCard3" mnemonicParsing="false" onAction="#TolakJadwal" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: red; -fx-font-weight: bold; -fx-background-radius: 10;" text="Tolak" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnTerimaCard3" mnemonicParsing="false" onAction="#TerimaBimbingan" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #009201; -fx-font-weight: bold; -fx-background-radius: 10;" text="Terima" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/jam.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalMahasiswaPertemuan3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                                    <Text fx:id="txtJamMahasiswaPertemuan3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="14:00:00">
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan4" alignment="CENTER" layoutX="16.0" layoutY="410.0" prefHeight="119.0" prefWidth="545.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivMahasiswaPertemuan4" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoMahasiswa/mahasiswa1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Text fx:id="txtNamaMahasiswaPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Adinda Lestari">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <Text fx:id="txtNimMahasiswaPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="2403310947" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                                    <Text fx:id="txtJurusanMahasiswaPertemuan4" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informatika " />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="txtRuanganMahasiswaPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan " />
+                              <Region prefHeight="4.0" prefWidth="246.0" />
+                              <VBox prefHeight="21.0" prefWidth="246.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text fx:id="txtJudulSkripsiMahasiswaPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengaruh Game Virtual Roblox Terhadap Pola Interaksi Anak Gen Z" wrappingWidth="226.595703125">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <Text fx:id="txtJudulPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul" />
+                              <Text fx:id="txtMahasiswaPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <HBox prefHeight="26.0" prefWidth="199.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnTolakCard4" mnemonicParsing="false" onAction="#TolakJadwal" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: red; -fx-font-weight: bold; -fx-background-radius: 10;" text="Tolak" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnTerimaCard4" mnemonicParsing="false" onAction="#TerimaBimbingan" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #009201; -fx-font-weight: bold; -fx-background-radius: 10;" text="Terima" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/jam.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalMahasiswaPertemuan4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                                    <Text fx:id="txtJamMahasiswaPertemuan4" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="14:00:00">
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan5" alignment="CENTER" layoutX="16.0" layoutY="545.0" prefHeight="119.0" prefWidth="545.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivMahasiswaPertemuan5" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoMahasiswa/mahasiswa1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Text fx:id="txtNamaMahasiswaPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Adinda Lestari">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <Text fx:id="txtNimMahasiswaPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="2403310947" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                                    <Text fx:id="txtJurusanMahasiswaPertemuan5" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informatika " />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="txtRuanganMahasiswaPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan" />
+                              <Region prefHeight="4.0" prefWidth="246.0" />
+                              <VBox prefHeight="21.0" prefWidth="246.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text fx:id="txtJudulSkripsiMahasiswaPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengaruh Game Virtual Roblox Terhadap Pola Interaksi Anak Gen Z" wrappingWidth="226.595703125">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <Text fx:id="txtJudulPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul" />
+                              <Text fx:id="txtMahasiswaPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <HBox prefHeight="26.0" prefWidth="199.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnTolakCard5" mnemonicParsing="false" onAction="#TolakJadwal" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: red; -fx-font-weight: bold; -fx-background-radius: 10;" text="Tolak" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnTerimaCard5" mnemonicParsing="false" onAction="#TerimaBimbingan" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #009201; -fx-font-weight: bold; -fx-background-radius: 10;" text="Terima" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/jam.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalMahasiswaPertemuan5" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                                    <Text fx:id="txtJamMahasiswaPertemuan5" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="14:00:00">
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan6" alignment="CENTER" layoutX="16.0" layoutY="680.0" prefHeight="119.0" prefWidth="545.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivMahasiswaPertemuan6" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoMahasiswa/mahasiswa1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Text fx:id="txtNamaMahasiswaPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Adinda Lestari">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <Text fx:id="txtNimMahasiswaPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="2403310947" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                                    <Text fx:id="txtJurusanMahasiswaPertemuan6" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informatika " />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="txtRuanganMahasiswaPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan" />
+                              <Region prefHeight="4.0" prefWidth="246.0" />
+                              <VBox prefHeight="21.0" prefWidth="246.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text fx:id="txtJudulSkripsiMahasiswaPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengaruh Game Virtual Roblox Terhadap Pola Interaksi Anak Gen Z" wrappingWidth="226.595703125">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <Text fx:id="txtJudulPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul" />
+                              <Text fx:id="txtMahasiswaPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <HBox prefHeight="26.0" prefWidth="199.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnTolakCard6" mnemonicParsing="false" onAction="#TolakJadwal" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: red; -fx-font-weight: bold; -fx-background-radius: 10;" text="Tolak" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnTerimaCard6" mnemonicParsing="false" onAction="#TerimaBimbingan" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #009201; -fx-font-weight: bold; -fx-background-radius: 10;" text="Terima" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/jam.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalMahasiswaPertemuan6" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                                    <Text fx:id="txtJamMahasiswaPertemuan6" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="14:00:00">
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <GridPane hgap="10" layoutX="35.0" layoutY="295.0" prefHeight="177.0" prefWidth="570.0" style="-fx-background-radius: 10;" vgap="10">
+         <children>
+            <Text text="Mahasiswa Bimbingan*" wrappingWidth="76.341796875" />
+            <Text text="Topik*" wrappingWidth="67.248046875" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Text>
+            <TextField fx:id="tfTopik" prefHeight="25.0" prefWidth="487.0" promptText="Masukkan Topik Bimbingan" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Text text="Ruangan*" GridPane.rowIndex="2" />
+            <TextField fx:id="tfRuangan" promptText="Masukkan Ruangan Bimbingan" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text text="Tanggal*" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dpTanggal" prefHeight="25.0" prefWidth="489.0" promptText="Masukkan Tanggal Bimbingan" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text layoutX="10.0" layoutY="101.0" text="Jam*" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cbJam" prefHeight="25.0" prefWidth="483.0" promptText="Masukkan Jam Bimbingan" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cbFormMahasiswaBimbingan" prefHeight="25.0" prefWidth="493.0" promptText="Pilih Mahasiswa Bimbingan" GridPane.columnIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints maxWidth="233.0" minWidth="80.0" prefWidth="91.0" />
+            <ColumnConstraints maxWidth="550.0" minWidth="135.0" prefWidth="550.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="48.0" minHeight="0.0" prefHeight="48.0" />
+            <RowConstraints maxHeight="75.0" minHeight="27.0" prefHeight="27.0" />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <Text fill="#015401" layoutX="35.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Form Jadwal Bimbingan">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnSimpanJadwal" layoutX="280.0" layoutY="480.0" mnemonicParsing="false" onAction="#SimpanJadwal" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #009201; -fx-font-weight: bold; -fx-background-radius: 10;" text="Simpan Jadwal" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

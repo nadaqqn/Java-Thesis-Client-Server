@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="417.0" prefWidth="645.0" style="-fx-background-color: white; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.ModalJadwalBimbinganMahasiswaController">
+    
+    <children>
+      <Text fill="#253a80" layoutX="25.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Hi,">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text fx:id="txtNamaMahasiswa" fill="#253a80" layoutX="45.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Mahasiswa!">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Hyperlink layoutX="608.0" layoutY="20.0" onAction="#closeModal" style="-fx-font-weight: bold;" text="X" />
+      <ImageView fitHeight="24.0" fitWidth="27.0" layoutX="25.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/calendar-biru.png" />
+         </image>
+      </ImageView>
+      <Text fill="#253a80" layoutX="60.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jadwal Bimbingan">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ScrollPane layoutX="25.0" layoutY="74.0" prefHeight="319.0" prefWidth="594.0" style="-fx-background-color: white;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1950.0" prefWidth="577.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox fx:id="cardBimbingan1" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan1" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan1" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan1" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan1" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan2" alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan2" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan2" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan2" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan2" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan3" alignment="CENTER" layoutX="10.0" layoutY="320.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan3" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan3" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan3" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan3" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan4" alignment="CENTER" layoutX="10.0" layoutY="480.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan4" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan4" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan4" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan4" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan5" alignment="CENTER" layoutX="10.0" layoutY="640.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan5" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan5" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan5" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan5" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan6" alignment="CENTER" layoutX="10.0" layoutY="800.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan6" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan6" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan6" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan6" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan7" alignment="CENTER" layoutX="10.0" layoutY="960.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan7" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan7" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan7" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan7" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan7" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan7" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan7" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan7" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan8" alignment="CENTER" layoutX="10.0" layoutY="1120.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan8" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan8" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan8" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan8" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan8" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan8" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan8" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan8" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan9" alignment="CENTER" layoutX="10.0" layoutY="1280.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan9" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan9" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan9" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan9" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan9" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan9" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan9" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan9" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan10" alignment="CENTER" layoutX="10.0" layoutY="1440.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan10" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan10" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan10" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan10" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan10" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan10" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan10" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan10" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan11" alignment="CENTER" layoutX="10.0" layoutY="1600.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan11" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan11" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan11" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan11" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan11" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan11" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan11" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan11" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="cardBimbingan12" alignment="CENTER" layoutX="10.0" layoutY="1760.0" prefHeight="117.0" prefWidth="554.0" style="-fx-background-color: white; -fx-border-color: #8d8d8d; -fx-border-radius: 10;">
+                     <children>
+                        <ImageView fx:id="ivDosenPertemuan12" fitHeight="78.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Text fx:id="txtNamaDosenPertemuan12" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dosen1">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                                    <Text fx:id="txtProdiDosenPertemuan12" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1" />
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="12.0" prefWidth="286.0" />
+                              <Text fx:id="txtJudulBimbinganPertemuan12" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Bimbingan1">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtRuanganBimbinganPertemuan12" layoutX="10.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruangan Bimbingan1" />
+                              <Text fx:id="txtPertemuan12" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan Bimbingan1" wrappingWidth="160.517578125" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/jam.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtTanggalBimbinganPertemuan12" layoutX="488.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text layoutX="449.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="," />
+                        <Text fx:id="txtJamBimbinganPertemuan12" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam">
+                           <HBox.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

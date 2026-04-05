@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.RegisterViewController">
+
+    <children>
+
+        <!-- Background -->
+        <ImageView fx:id="imgBackground" preserveRatio="false" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+            <image>
+                <Image url="@../images/bg.png" />
+            </image>
+        </ImageView>
+      <VBox alignment="TOP_CENTER" layoutX="450.0" layoutY="70.0">
+         <children>
+      
+              <!-- Konten utama -->
+              <VBox alignment="TOP_CENTER" prefHeight="707.0" prefWidth="600.0" spacing="20.0">
+                  <padding>
+                      <Insets bottom="20.0" left="20.0" top="20.0" />
+                  </padding>
+      
+                  <!-- Container Putih -->
+                  <VBox alignment="CENTER" maxWidth="483.0" prefHeight="644.0" prefWidth="483.0" spacing="18.0" style="-fx-background-color: white; -fx-background-radius: 18;">
+                      <padding>
+                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                      </padding>
+      
+                      <!-- Logo -->
+                      <ImageView fitHeight="52.0" fitWidth="207.0" preserveRatio="true">
+                          <image>
+                              <Image url="@../images/logo.png" />
+                          </image>
+                     <VBox.margin>
+                        <Insets right="270.0" />
+                     </VBox.margin>
+                      </ImageView>
+      
+                      <!-- Title -->
+                      <Text style="-fx-font-weight: bold;" text="Daftar Akun Baru">
+                          <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="-20.0" />
+                     </VBox.margin>
+                      </Text>
+                      <Text text="Lengkapi Data Diri Anda Untuk Membuat Akun">
+                     <VBox.margin>
+                        <Insets top="-20.0" />
+                     </VBox.margin>
+                      </Text>
+                      <Region prefHeight="10" />
+      
+                      <!-- Form -->
+                      <VBox maxWidth="750" spacing="10">
+                     <HBox spacing="20">
+                        <children>
+                           <VBox prefHeight="52.0" prefWidth="106.0" spacing="5" HBox.hgrow="ALWAYS">
+                              <children>
+                                 <Label text="Nama Lengkap *">
+                                    <font>
+                                       <Font size="14" />
+                                    </font>
+                                    <VBox.margin>
+                                       <Insets top="-30.0" />
+                                    </VBox.margin>
+                                 </Label>
+                                 <TextField fx:id="txtnama" promptText="Masukkan nama lengkap" style="-fx-background-radius: 8;" />
+                              </children>
+                           </VBox>
+                           <VBox spacing="5" HBox.hgrow="ALWAYS">
+                              <children>
+                                 <Label text="Role *">
+                                    <font>
+                                       <Font size="14" />
+                                    </font>
+                                    <VBox.margin>
+                                       <Insets top="-30.0" />
+                                    </VBox.margin>
+                                 </Label>
+                                  <ComboBox fx:id="comboRole" promptText="Pilih role" />
+                              </children>
+                           </VBox>
+                        </children>
+                     </HBox>
+      
+                          <HBox spacing="20">
+                              <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                  <Label text="NIM/ NIP *">
+                                      <font>
+                                 <Font size="14" />
+                              </font>
+                                  </Label>
+                                  <TextField fx:id="txtnim" promptText="NIM" style="-fx-background-radius: 8;" />
+                              </VBox>
+                              <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                  <Label text="Jurusan / Prodi *">
+                                      <font>
+                                 <Font size="14" />
+                              </font>
+                                  </Label>
+                                  <TextField fx:id="txtjurusan" promptText="Pilih jurusan" style="-fx-background-radius: 8;" />
+                              </VBox>
+                          </HBox>
+      
+                          <Label text="Email *">
+                              <font>
+                           <Font size="14" />
+                        </font>
+                          </Label>
+                          <TextField fx:id="txtemail" promptText="Masukkan email@gmail.com" style="-fx-background-radius: 8;" />
+                     <AnchorPane layoutX="10.0" layoutY="254.0">
+                        <children>
+                           <Text fx:id="fmemail" fill="RED" text="Format email tidak valid.">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </AnchorPane>
+      
+                          <HBox spacing="20">
+                              <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                  <Label text="No Telepon *">
+                                      <font>
+                                 <Font size="14" />
+                              </font>
+                                  </Label>
+                                  <TextField fx:id="txtno" promptText="+62 812-3450-6780" style="-fx-background-radius: 8;" />
+                              </VBox>
+                              <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                  <Label text="Angkatan *">
+                                      <font>
+                                 <Font size="14" />
+                              </font>
+                                  </Label>
+                                  <TextField fx:id="txtangkatan" promptText="Pilih angkatan" style="-fx-background-radius: 8;" />
+                              </VBox>
+                          </HBox>
+                     <AnchorPane layoutX="10.0" layoutY="319.0">
+                        <children>
+                           <Text fx:id="fmnomor" fill="RED" text="Format no telepon tidak valid.">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </AnchorPane>
+      
+                         <Label text="Kata Sandi *">
+                              <font>
+                           <Font size="14" />
+                        </font>
+                        <VBox.margin>
+                           <Insets bottom="-10.0" />
+                        </VBox.margin>
+                          </Label>
+                          <StackPane>
+                              <children>
+                                  <PasswordField fx:id="txtsanditidaktampak" promptText="Minimal 6 karakter" style="-fx-background-radius: 8;" />
+                           <TextField fx:id="txtsanditampak" />
+                                 <ImageView fx:id="eyesanditerbuka" fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: default; -fx-opacity: 0.5;">
+          <image>
+              <Image url="@../images/eyeopen.png" />
+          </image>
+          <StackPane.margin>
+             <Insets left="380.0" />
+          </StackPane.margin>
+      </ImageView>
+                           <ImageView fx:id="eyesanditertutup" fitHeight="17.0" fitWidth="17.0" layoutX="412.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: default; -fx-opacity: 0.5;">
+                              <image>
+                                 <Image url="@../images/eyeclose.png" />
+                              </image>
+                              <StackPane.margin>
+                                 <Insets left="380.0" />
+                              </StackPane.margin>
+                           </ImageView>
+                              </children>
+                          </StackPane>
+                     <AnchorPane>
+                        <children>
+                           <Text fx:id="fmsandi" fill="RED" text="Format kata sandi tidak valid.">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </AnchorPane>
+      
+                  
+                                      <Label text="Konfirmasi Kata Sandi *">
+                              <font>
+                           <Font size="14" />
+                        </font>
+                        <VBox.margin>
+                           <Insets bottom="-10.0" />
+                        </VBox.margin>
+                          </Label>
+                     <StackPane layoutX="10.0" layoutY="298.0">
+                        <children>
+                                <PasswordField fx:id="txtkonfirmasisanditidaktampak" promptText="Ulang kata sandi" style="-fx-background-radius: 8;" />
+                           <TextField fx:id="txtkonfirmasisanditampak" />
+                    <ImageView fx:id="eyekonfirmasisanditerbuka" fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: default; -fx-opacity: 0.5;">
+          <image>
+              <Image url="@../images/eyeopen.png" />
+          </image>
+          <StackPane.margin>
+             <Insets left="380.0" />
+          </StackPane.margin>
+      </ImageView>
+                           <ImageView fx:id="eyekonfirmasisanditertutup" fitHeight="17.0" fitWidth="17.0" layoutX="412.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: default; -fx-opacity: 0.5;">
+                              <image>
+                                 <Image url="@../images/eyeclose.png" />
+                              </image>
+                              <StackPane.margin>
+                                 <Insets left="380.0" />
+                              </StackPane.margin>
+                           </ImageView>
+                        </children>
+                     </StackPane>
+                     <AnchorPane layoutX="10.0" layoutY="55.0">
+                        <children>
+                           <Text fx:id="fmkonfirmasisandi" fill="RED" text="Kata sandi tidak cocok.">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </AnchorPane>
+      
+                      </VBox>
+      
+                      <!-- Register Button -->
+                      <Button fx:id="btnRegister" maxWidth="300" onAction="#handleRegister" prefHeight="40.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 8; -fx-font-size: 16px; -fx-font-weight: bold;" text="DAFTAR SEKARANG" />
+      
+                      <!-- Terms -->
+                      <HBox alignment="CENTER" spacing="5">
+                          <Text text="Dengan mendaftar, Anda menyetujui ">
+                        <font>
+                           <Font size="14" />
+                        </font>
+                        <HBox.margin>
+                           <Insets top="-10.0" />
+                        </HBox.margin>
+                     </Text>
+                          <Hyperlink text="Syarat dan Ketentuan" textFill="#001ea1">
+                        <font>
+                           <Font size="14" />
+                        </font>
+                        <HBox.margin>
+                           <Insets top="-9.0" />
+                        </HBox.margin>
+                     </Hyperlink>
+                          <Text text=" kami.">
+                        <font>
+                           <Font size="14" />
+                        </font>
+                        <HBox.margin>
+                           <Insets top="-10.0" />
+                        </HBox.margin>
+                     </Text>
+                      </HBox>
+      
+                  </VBox>
+      
+              </VBox>
+            <Text fill="WHITE" text="Copyright© by Layanan Bimbingan Skripsi STB 2025">
+               <VBox.margin>
+                  <Insets top="-30.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+
+    </children>
+</AnchorPane>

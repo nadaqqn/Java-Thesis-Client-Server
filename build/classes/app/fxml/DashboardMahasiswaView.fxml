@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.DashboardMahasiswaViewController">
+
+    <children>
+
+        <!-- Background Image -->
+        <ImageView fx:id="bgImage" preserveRatio="false">
+            <image>
+                <Image url="@../images/bg.png" />
+            </image>
+            <fitWidth>1280</fitWidth>
+            <fitHeight>720</fitHeight>
+            <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+            <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+            <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+            <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+        </ImageView>
+
+        <!-- Header Blue Shape -->
+        <Rectangle fx:id="headerShape" arcHeight="20" arcWidth="20" fill="#253a80" height="207.0" layoutY="-25.0" width="1280.0" AnchorPane.topAnchor="-25.0" />
+
+        <!-- Header Text -->
+        <VBox fx:id="header" alignment="BOTTOM_CENTER" layoutY="76.0" prefHeight="128.0" prefWidth="1270.0" spacing="5" style="-fx-background-color: #253a80; -fx-background-radius: 35;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+            <HBox>
+               <children>
+                      <Text fill="WHITE" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Hi, ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtNamaMahasiswa" fill="WHITE" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Mahasiswa!">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+                <Text fill="white" style="-fx-font-size: 14;" text="Sudah revisi hari ini?" />
+            </children>
+         <padding>
+            <Insets bottom="60.0" left="40.0" right="1103.0" />
+         </padding>
+        </VBox>
+        <AnchorPane fx:id="navbarContainer" layoutX="0" layoutY="0" prefHeight="68.0" prefWidth="1280.0" />
+
+
+        <!-- Search Bar -->
+        <HBox layoutX="29.0" layoutY="160" prefHeight="35.0" prefWidth="1203.0" spacing="10" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <children>
+                <Label style="-fx-font-size: 16;" text="🔍" />
+                <TextField prefHeight="25.0" prefWidth="201.0" promptText="Cari dosen pembimbing kamu" style="-fx-background-color: transparent;" />
+            </children>
+
+            <padding>
+                <Insets bottom="5" left="10" right="10" top="5" />
+            </padding>
+        </HBox>
+      <ImageView fx:id="imgCalendar" fitHeight="40.0" fitWidth="90.0" layoutX="1100.0" layoutY="80.0" onMouseClicked="#goToJadwal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/calendar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="90.0" layoutX="1180.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/notification.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="txtJadwal" fill="WHITE" layoutX="1097.0" layoutY="135.0" onMouseClicked="#goToJadwal" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Jadwal">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="1170.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Notifikasi">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <VBox layoutY="215.0" prefHeight="502.0" prefWidth="1276.0">
+         <children>
+            <Text fill="WHITE" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Daftar Dosen Pembimbing">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Region prefHeight="15.0" prefWidth="1196.0" />
+      
+                    <!-- Filter -->
+              <HBox spacing="10">
+                  <children>
+                      <Button fx:id="btnFilterSemua" onAction="#filterSemua" style="-fx-background-color: white;" text="Semua" />
+                      <Button fx:id="btnFilterFull" onAction="#filterFull" style="-fx-background-color: white;" text="Full" />
+                      <Button fx:id="btnFilterTersedia" onAction="#filterTersedia" style="-fx-background-color: white;" text="Tersedia" />
+                  </children>
+              </HBox>
+            <Region layoutX="50.0" layoutY="55.0" prefHeight="15.0" prefWidth="1196.0" />
+      
+                    <!-- Cards Grid -->
+              <GridPane hgap="55.0" prefHeight="180.0" prefWidth="1183.0" vgap="20">
+      
+                        <columnConstraints>
+                      <ColumnConstraints prefWidth="280" />
+                      <ColumnConstraints prefWidth="280" />
+                      <ColumnConstraints prefWidth="280" />
+                      <ColumnConstraints prefWidth="280" />
+                  </columnConstraints>
+      
+                        <!-- 8 Cards -->
+                  <!-- CARD TEMPLATE -->
+                  <children>
+      
+                            <!-- Card #1 -->
+                        <StackPane fx:id="card1" prefHeight="180.0" prefWidth="280">
+      
+                                <children>
+      
+                                    <!-- White Base -->
+                              <Rectangle arcHeight="15" arcWidth="15" fill="white" height="180.0" width="280" />
+                        <StackPane>
+                           <children>
+         
+                                              <ImageView fitHeight="178.0" fitWidth="278.0" opacity="0.2">
+                                         <image>
+                                             <Image url="@../images/logo.png" />
+                                         </image>
+                                     </ImageView>
+            
+                                          <!-- Blue Header -->
+                                    <Rectangle arcHeight="15" arcWidth="15" fill="#253a80" height="178.0" width="216.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="-2.0" right="-63.0" top="-2.0" />
+                                 </StackPane.margin>
+                              </Rectangle>
+                              <ImageView fx:id="ivDosen1" fitHeight="68.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <StackPane.margin>
+                                    <Insets right="160.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                              <StackPane alignment="TOP_LEFT" prefHeight="24.0" prefWidth="196.0">
+                                 <children>
+                                    <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="#009201" height="24.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+               
+                                                          <Text fx:id="txtJmlBimbDosen1" fill="WHITE" style="-fx-font-weight: bold;" text="3">
+                                       <StackPane.margin>
+                                          <Insets left="13.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fill="WHITE" layoutX="21.0" layoutY="27.0" style="-fx-font-weight: bold;" text="/">
+                                       <StackPane.margin>
+                                          <Insets left="22.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fx:id="txtKuotaDosen1" fill="WHITE" layoutX="21.0" layoutY="27.0" style="-fx-font-weight: bold;" text="12">
+                                       <StackPane.margin>
+                                          <Insets left="29.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+            
+                                          <!-- Content -->
+                                    <VBox alignment="TOP_RIGHT" prefHeight="204.0" prefWidth="280.0" spacing="5.0">
+                                        <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+            
+                                              <Text fx:id="txtNamaDosen1" fill="WHITE" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Nama Dosen">
+                                    <font>
+                                       <Font size="14.0" />
+                                    </font>
+                                 </Text>
+                                 <HBox prefHeight="17.0" prefWidth="166.0">
+                                    <children>
+                                       <Text fill="WHITE" style="-fx-font-size: 12;" text="Dosen" textAlignment="RIGHT" wrappingWidth="36.787109375">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Text>
+                  
+                                                          <Text fx:id="txtProdiDosen1" fill="WHITE" style="-fx-font-size: 12;" text="Informatika" textAlignment="RIGHT" wrappingWidth="63.787109375">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Text>
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets left="159.0" />
+                                    </VBox.margin>
+                                 </HBox>
+            
+                                              <Text fx:id="txtUmurDosen1" fill="WHITE" style="-fx-font-size: 10;" text="Umur Dosen" />
+                                 <Text fx:id="txtNoTelpDosen1" fill="WHITE" layoutX="240.0" layoutY="80.0" style="-fx-font-size: 10;" text="No Telepon Dosen" />
+                                 <Text fx:id="txtEmailDosen1" fill="WHITE" layoutX="198.0" layoutY="99.0" style="-fx-font-size: 10;" text="Email Dosen" />
+                                 <Region prefHeight="15.0" prefWidth="260.0" />
+            
+                                          </VBox>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                  
+                                                 <Button onAction="#handleAjukan" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajukan" userData="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="80.0" top="110.0" />
+                           </StackPane.margin>
+                        </Button>
+      
+                                </children>
+                      </StackPane>
+                      
+                  <!-- Card #2 -->
+                  <StackPane fx:id="card2" layoutX="10.0" layoutY="10.0" prefHeight="180.0" prefWidth="280" GridPane.columnIndex="1">
+                     <children>
+                        <Rectangle arcHeight="15" arcWidth="15" fill="white" height="180.0" width="280" />
+                        <StackPane>
+                           <children>
+                              <ImageView fitHeight="178.0" fitWidth="278.0" opacity="0.2">
+                                 <image>
+                                    <Image url="@../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="15" arcWidth="15" fill="#253a80" height="178.0" width="216.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="-2.0" right="-63.0" top="-2.0" />
+                                 </StackPane.margin>
+                              </Rectangle>
+                              <ImageView fx:id="ivDosen2" fitHeight="68.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <StackPane.margin>
+                                    <Insets right="160.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                              <StackPane alignment="TOP_LEFT" prefHeight="24.0" prefWidth="196.0">
+                                 <children>
+                                    <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#009201" height="24.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                                    <Text fx:id="txtJmlBimbDosen2" fill="WHITE" style="-fx-font-weight: bold;" text="3">
+                                       <StackPane.margin>
+                                          <Insets left="13.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fill="WHITE" style="-fx-font-weight: bold;" text="/">
+                                       <StackPane.margin>
+                                          <Insets left="22.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fx:id="txtKuotaDosen2" fill="WHITE" style="-fx-font-weight: bold;" text="12">
+                                       <StackPane.margin>
+                                          <Insets left="29.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+                              <VBox alignment="TOP_RIGHT" prefHeight="204.0" prefWidth="280.0" spacing="5">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Text fx:id="txtNamaDosen2" fill="WHITE" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Nama Dosen" wrappingWidth="195.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <HBox>
+                                       <children>
+                                          <Text fill="WHITE" style="-fx-font-size: 12;" text="Dosen" textAlignment="RIGHT" wrappingWidth="34.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtProdiDosen2" fill="WHITE" style="-fx-font-size: 12;" text="Informatika" textAlignment="RIGHT" wrappingWidth="64.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="160.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Text fx:id="txtUmurDosen2" fill="WHITE" style="-fx-font-size: 10;" text="Umur Dosen" />
+                                    <Text fx:id="txtNoTelpDosen2" fill="WHITE" layoutX="240.0" layoutY="80.0" style="-fx-font-size: 10;" text="No Telepon Dosen" />
+                                    <Text fx:id="txtEmailDosen2" fill="WHITE" layoutX="198.0" layoutY="99.0" style="-fx-font-size: 10;" text="Email Dosen" />
+                                    <Region prefHeight="15.0" prefWidth="260.0" />
+                                 </children>
+                              </VBox>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                        <Button onAction="#handleAjukan" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajukan" userData="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="80.0" top="110.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  
+                 <!-- Card #3 -->
+
+                  <StackPane fx:id="card3" layoutX="10.0" layoutY="10.0" prefHeight="180.0" prefWidth="280" GridPane.columnIndex="2">
+                     <children>
+                        <Rectangle arcHeight="15" arcWidth="15" fill="white" height="180.0" width="280" />
+                        <StackPane>
+                           <children>
+                              <ImageView fitHeight="178.0" fitWidth="278.0" opacity="0.2">
+                                 <image>
+                                    <Image url="@../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="15" arcWidth="15" fill="#253a80" height="178.0" width="216.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="-2.0" right="-63.0" top="-2.0" />
+                                 </StackPane.margin>
+                              </Rectangle>
+                              <ImageView fx:id="ivDosen3" fitHeight="68.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <StackPane.margin>
+                                    <Insets right="160.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                              <StackPane alignment="TOP_LEFT" prefHeight="24.0" prefWidth="196.0">
+                                 <children>
+                                    <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="#009201" height="24.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                                    <Text fx:id="txtJmlBimbDosen3" fill="WHITE" style="-fx-font-weight: bold;" text="3">
+                                       <StackPane.margin>
+                                          <Insets left="13.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fill="WHITE" style="-fx-font-weight: bold;" text="/">
+                                       <StackPane.margin>
+                                          <Insets left="22.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fx:id="txtKuotaDosen3" fill="WHITE" style="-fx-font-weight: bold;" text="12">
+                                       <StackPane.margin>
+                                          <Insets left="29.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+                              <VBox alignment="TOP_RIGHT" prefHeight="204.0" prefWidth="280.0" spacing="5">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Text fx:id="txtNamaDosen3" fill="WHITE" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Nama Dosen">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox>
+                                       <children>
+                                          <Text fill="WHITE" style="-fx-font-size: 12;" text="Dosen" textAlignment="RIGHT" wrappingWidth="33.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtProdiDosen3" fill="WHITE" style="-fx-font-size: 12;" text="Bisnis Digital" textAlignment="RIGHT" wrappingWidth="69.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="156.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Text fx:id="txtUmurDosen3" fill="WHITE" style="-fx-font-size: 10;" text="Umur Dosen" />
+                                    <Text fx:id="txtNoTelpDosen3" fill="WHITE" layoutX="240.0" layoutY="80.0" style="-fx-font-size: 10;" text="No Telepon Dosen" />
+                                    <Text fx:id="txtEmailDosen3" fill="WHITE" layoutX="198.0" layoutY="99.0" style="-fx-font-size: 10;" text="Email Dosen" />
+                                    <Region prefHeight="15.0" prefWidth="260.0" />
+                                 </children>
+                              </VBox>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                        <Button onAction="#handleAjukan" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajukan" userData="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="80.0" top="110.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  
+                 <!-- Card 4 -->
+
+                  <StackPane fx:id="card4" layoutX="610.0" layoutY="10.0" prefHeight="180.0" prefWidth="280" GridPane.columnIndex="3">
+                     <children>
+                        <Rectangle arcHeight="15" arcWidth="15" fill="white" height="180.0" width="280" />
+                        <StackPane>
+                           <children>
+                              <ImageView fitHeight="178.0" fitWidth="278.0" opacity="0.2">
+                                 <image>
+                                    <Image url="@../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="15" arcWidth="15" fill="#253a80" height="178.0" width="216.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="-2.0" right="-63.0" top="-2.0" />
+                                 </StackPane.margin>
+                              </Rectangle>
+                              <ImageView fx:id="ivDosen4" fitHeight="68.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <StackPane.margin>
+                                    <Insets right="160.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                              <StackPane alignment="TOP_LEFT" prefHeight="24.0" prefWidth="196.0">
+                                 <children>
+                                    <Rectangle fx:id="rect4" arcHeight="5.0" arcWidth="5.0" fill="#009201" height="24.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                                    <Text fx:id="txtJmlBimbDosen4" fill="WHITE" style="-fx-font-weight: bold;" text="3">
+                                       <StackPane.margin>
+                                          <Insets left="13.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fill="WHITE" style="-fx-font-weight: bold;" text="/">
+                                       <StackPane.margin>
+                                          <Insets left="22.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fx:id="txtKuotaDosen4" fill="WHITE" style="-fx-font-weight: bold;" text="12">
+                                       <StackPane.margin>
+                                          <Insets left="29.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+                              <VBox alignment="TOP_RIGHT" prefHeight="204.0" prefWidth="280.0" spacing="5">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Text fx:id="txtNamaDosen4" fill="WHITE" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Nama Dosen">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox>
+                                       <children>
+                                          <Text fill="WHITE" style="-fx-font-size: 12;" text="Dosen" textAlignment="RIGHT" wrappingWidth="33.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtProdiDosen4" fill="WHITE" style="-fx-font-size: 12;" text="Informatika" textAlignment="RIGHT" wrappingWidth="63.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="162.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Text fx:id="txtUmurDosen4" fill="WHITE" style="-fx-font-size: 10;" text="Umur Dosen" />
+                                    <Text fx:id="txtNoTelpDosen4" fill="WHITE" layoutX="240.0" layoutY="80.0" style="-fx-font-size: 10;" text="No Telepon Dosen" />
+                                    <Text fx:id="txtEmailDosen4" fill="WHITE" layoutX="198.0" layoutY="99.0" style="-fx-font-size: 10;" text="Email Dosen" />
+                                    <Region prefHeight="15.0" prefWidth="260.0" />
+                                 </children>
+                              </VBox>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                        <Button onAction="#handleAjukan" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajukan" userData="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="80.0" top="110.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+      
+                <!-- Baris 2  -->
+      
+                        </children>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+               <VBox.margin>
+                  <Insets right="-50.0" />
+               </VBox.margin>
+              </GridPane>
+            <Region layoutX="50.0" layoutY="92.0" prefHeight="15.0" prefWidth="1196.0" />
+            <GridPane hgap="55.0" layoutX="50.0" layoutY="107.0" prefHeight="180.0" prefWidth="1183.0" vgap="20">
+               <columnConstraints>
+                  <ColumnConstraints prefWidth="280" />
+                  <ColumnConstraints prefWidth="280" />
+                  <ColumnConstraints prefWidth="280" />
+                  <ColumnConstraints prefWidth="280" />
+               </columnConstraints>
+               <children>
+                   
+                 <!-- Card 5 -->
+
+                  <StackPane fx:id="card5" prefHeight="180.0" prefWidth="280">
+                     <children>
+                        <Rectangle arcHeight="15" arcWidth="15" fill="white" height="180.0" width="280" />
+                        <StackPane>
+                           <children>
+                              <ImageView fitHeight="178.0" fitWidth="278.0" opacity="0.2">
+                                 <image>
+                                    <Image url="@../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="15" arcWidth="15" fill="#253a80" height="178.0" width="216.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="-2.0" right="-63.0" top="-2.0" />
+                                 </StackPane.margin>
+                              </Rectangle>
+                              <ImageView fx:id="ivDosen5" fitHeight="68.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <StackPane.margin>
+                                    <Insets right="160.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                              <StackPane alignment="TOP_LEFT" prefHeight="24.0" prefWidth="196.0">
+                                 <children>
+                                    <Rectangle fx:id="rect5" arcHeight="5.0" arcWidth="5.0" fill="#009201" height="24.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                                    <Text fx:id="txtJmlBimbDosen5" fill="WHITE" style="-fx-font-weight: bold;" text="3">
+                                       <StackPane.margin>
+                                          <Insets left="13.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fill="WHITE" style="-fx-font-weight: bold;" text="/">
+                                       <StackPane.margin>
+                                          <Insets left="22.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fx:id="txtKuotaDosen5" fill="WHITE" style="-fx-font-weight: bold;" text="12">
+                                       <StackPane.margin>
+                                          <Insets left="29.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+                              <VBox alignment="TOP_RIGHT" prefHeight="204.0" prefWidth="280.0" spacing="5">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Text fx:id="txtNamaDosen5" fill="WHITE" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Nama Dosen">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox>
+                                       <children>
+                                          <Text fill="WHITE" style="-fx-font-size: 12;" text="Dosen" textAlignment="RIGHT" wrappingWidth="35.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtProdiDosen5" fill="WHITE" style="-fx-font-size: 12;" text="Informatika" textAlignment="RIGHT" wrappingWidth="62.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="161.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Text fx:id="txtUmurDosen5" fill="WHITE" style="-fx-font-size: 10;" text="Umur Dosen" />
+                                    <Text fx:id="txtNoTelpDosen5" fill="WHITE" layoutX="240.0" layoutY="80.0" style="-fx-font-size: 10;" text="No Telepon Dosen" />
+                                    <Text fx:id="txtEmailDosen5" fill="WHITE" layoutX="198.0" layoutY="99.0" style="-fx-font-size: 10;" text="Email Dosen" />
+                                    <Region prefHeight="15.0" prefWidth="260.0" />
+                                 </children>
+                              </VBox>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                        <Button onAction="#handleAjukan" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajukan" userData="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="80.0" top="110.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  
+                <!-- Card 6 -->
+
+                  <StackPane fx:id="card6" layoutX="10.0" layoutY="10.0" prefHeight="180.0" prefWidth="280" GridPane.columnIndex="1">
+                     <children>
+                        <Rectangle arcHeight="15" arcWidth="15" fill="white" height="180.0" width="280" />
+                        <StackPane>
+                           <children>
+                              <ImageView fitHeight="178.0" fitWidth="278.0" opacity="0.2">
+                                 <image>
+                                    <Image url="@../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="15" arcWidth="15" fill="#253a80" height="178.0" width="216.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="-2.0" right="-63.0" top="-2.0" />
+                                 </StackPane.margin>
+                              </Rectangle>
+                              <ImageView fx:id="ivDosen6" fitHeight="68.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <StackPane.margin>
+                                    <Insets right="160.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                              <StackPane alignment="TOP_LEFT" prefHeight="24.0" prefWidth="196.0">
+                                 <children>
+                                    <Rectangle fx:id="rect6" arcHeight="5.0" arcWidth="5.0" fill="#009201" height="24.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                                    <Text fx:id="txtJmlBimbDosen6" fill="WHITE" style="-fx-font-weight: bold;" text="3">
+                                       <StackPane.margin>
+                                          <Insets left="13.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fill="WHITE" style="-fx-font-weight: bold;" text="/">
+                                       <StackPane.margin>
+                                          <Insets left="22.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fx:id="txtKuotaDosen6" fill="WHITE" style="-fx-font-weight: bold;" text="12">
+                                       <StackPane.margin>
+                                          <Insets left="29.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+                              <VBox alignment="TOP_RIGHT" prefHeight="204.0" prefWidth="280.0" spacing="5">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Text fx:id="txtNamaDosen6" fill="WHITE" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Nama Dosen">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox>
+                                       <children>
+                                          <Text fill="WHITE" style="-fx-font-size: 12;" text="Dosen" textAlignment="RIGHT" wrappingWidth="35.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtProdiDosen6" fill="WHITE" style="-fx-font-size: 12;" text="Informatika" textAlignment="RIGHT" wrappingWidth="63.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="161.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Text fx:id="txtUmurDosen6" fill="WHITE" style="-fx-font-size: 10;" text="Umur Dosen" />
+                                    <Text fx:id="txtNoTelpDosen6" fill="WHITE" layoutX="240.0" layoutY="80.0" style="-fx-font-size: 10;" text="No Telepon Dosen" />
+                                    <Text fx:id="txtEmailDosen6" fill="WHITE" layoutX="198.0" layoutY="99.0" style="-fx-font-size: 10;" text="Email Dosen" />
+                                    <Region prefHeight="15.0" prefWidth="260.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <Button onAction="#handleAjukan" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajukan" userData="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="80.0" top="110.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  
+                 <!-- Card 7 -->
+
+                  <StackPane fx:id="card7" layoutX="10.0" layoutY="10.0" prefHeight="180.0" prefWidth="280" GridPane.columnIndex="2">
+                     <children>
+                        <Rectangle arcHeight="15" arcWidth="15" fill="white" height="180.0" width="280" />
+                        <StackPane>
+                           <children>
+                              <ImageView fitHeight="178.0" fitWidth="278.0" opacity="0.2">
+                                 <image>
+                                    <Image url="@../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="15" arcWidth="15" fill="#253a80" height="178.0" width="216.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="-2.0" right="-63.0" top="-2.0" />
+                                 </StackPane.margin>
+                              </Rectangle>
+                              <ImageView fx:id="ivDosen7" fitHeight="68.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <StackPane.margin>
+                                    <Insets right="160.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                              <StackPane alignment="TOP_LEFT" prefHeight="24.0" prefWidth="196.0">
+                                 <children>
+                                    <Rectangle fx:id="rect7" arcHeight="5.0" arcWidth="5.0" fill="#009201" height="24.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                                    <Text fx:id="txtJmlBimbDosen7" fill="WHITE" style="-fx-font-weight: bold;" text="3">
+                                       <StackPane.margin>
+                                          <Insets left="13.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fill="WHITE" style="-fx-font-weight: bold;" text="/">
+                                       <StackPane.margin>
+                                          <Insets left="22.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fx:id="txtKuotaDosen7" fill="WHITE" style="-fx-font-weight: bold;" text="12">
+                                       <StackPane.margin>
+                                          <Insets left="29.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+                              <VBox alignment="TOP_RIGHT" prefHeight="204.0" prefWidth="280.0" spacing="5">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Text fx:id="txtNamaDosen7" fill="WHITE" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Nama Dosen">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox>
+                                       <children>
+                                          <Text fill="WHITE" style="-fx-font-size: 12;" text="Dosen" textAlignment="RIGHT" wrappingWidth="38.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtProdiDosen7" fill="WHITE" style="-fx-font-size: 12;" text="Informatika" textAlignment="RIGHT" wrappingWidth="61.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="161.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Text fx:id="txtUmurDosen7" fill="WHITE" style="-fx-font-size: 10;" text="Umur Dosen" />
+                                    <Text fx:id="txtNoTelpDosen7" fill="WHITE" layoutX="240.0" layoutY="80.0" style="-fx-font-size: 10;" text="No Telepon Dosen" />
+                                    <Text fx:id="txtEmailDosen7" fill="WHITE" layoutX="198.0" layoutY="99.0" style="-fx-font-size: 10;" text="Email Dosen" />
+                                    <Region prefHeight="15.0" prefWidth="260.0" />
+                                 </children>
+                              </VBox>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                        <Button onAction="#handleAjukan" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajukan" userData="7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="80.0" top="110.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  
+                  <!-- Card 8 -->
+
+                  <StackPane fx:id="card8" layoutX="610.0" layoutY="10.0" prefHeight="180.0" prefWidth="280" GridPane.columnIndex="3">
+                     <children>
+                        <Rectangle arcHeight="15" arcWidth="15" fill="white" height="180.0" width="280" />
+                        <StackPane>
+                           <children>
+                              <ImageView fitHeight="178.0" fitWidth="278.0" opacity="0.2">
+                                 <image>
+                                    <Image url="@../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="15" arcWidth="15" fill="#253a80" height="178.0" width="216.0">
+                                 <StackPane.margin>
+                                    <Insets bottom="-2.0" right="-63.0" top="-2.0" />
+                                 </StackPane.margin>
+                              </Rectangle>
+                              <ImageView fx:id="ivDosen8" fitHeight="68.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <StackPane.margin>
+                                    <Insets right="160.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                              <StackPane alignment="TOP_LEFT" prefHeight="24.0" prefWidth="196.0">
+                                 <children>
+                                    <Rectangle fx:id="rect8" arcHeight="5.0" arcWidth="5.0" fill="#009201" height="24.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                                    <Text fx:id="txtJmlBimbDosen8" fill="WHITE" style="-fx-font-weight: bold;" text="3">
+                                       <StackPane.margin>
+                                          <Insets left="13.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fill="WHITE" style="-fx-font-weight: bold;" text="/">
+                                       <StackPane.margin>
+                                          <Insets left="22.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                    <Text fx:id="txtKuotaDosen8" fill="WHITE" style="-fx-font-weight: bold;" text="12">
+                                       <StackPane.margin>
+                                          <Insets left="29.0" top="4.0" />
+                                       </StackPane.margin>
+                                    </Text>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+                              <VBox alignment="TOP_RIGHT" prefHeight="204.0" prefWidth="280.0" spacing="5">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Text fx:id="txtNamaDosen8" fill="WHITE" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Nama Dosen">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox>
+                                       <children>
+                                          <Text fill="WHITE" style="-fx-font-size: 12;" text="Dosen" textAlignment="RIGHT" wrappingWidth="34.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtProdiDosen8" fill="WHITE" style="-fx-font-size: 12;" text="Informatika" textAlignment="RIGHT" wrappingWidth="63.787109375">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="161.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Text fx:id="txtUmurDosen8" fill="WHITE" style="-fx-font-size: 10;" text="Umur Dosen" />
+                                    <Text fx:id="txtNoTelpDosen8" fill="WHITE" layoutX="240.0" layoutY="80.0" style="-fx-font-size: 10;" text="No Telepon Dosen" />
+                                    <Text fx:id="txtEmailDosen8" fill="WHITE" layoutX="198.0" layoutY="99.0" style="-fx-font-size: 10;" text="Email Dosen" />
+                                    <Region prefHeight="15.0" prefWidth="260.0" />
+                                 </children>
+                              </VBox>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                        <Button onAction="#handleAjukan" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajukan" userData="8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="80.0" top="110.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  
+               </children>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+               <VBox.margin>
+                  <Insets right="-50.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets left="40.0" right="40.0" top="10.0" />
+         </padding>
+      </VBox>
+
+    </children>
+</AnchorPane>

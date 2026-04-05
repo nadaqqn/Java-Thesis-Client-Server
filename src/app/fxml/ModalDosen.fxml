@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="565.0" prefWidth="463.0" spacing="9.0" style="-fx-padding: 20; -fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.ModalDosenController">
+    <Button onAction="#closeModal" style="-fx-background-color: white; -fx-border-color: grey;" text="X">
+      <VBox.margin>
+         <Insets left="400.0" />
+      </VBox.margin></Button>
+   <VBox>
+      <children>
+         <HBox spacing="10.0" style="-fx-background-color: #edf7ed; -fx-background-radius: 10;">
+            <children>
+               <ImageView fx:id="ivMahasiswa" fitHeight="90.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/fotoMahasiswa/mahasiswa1.png" />
+                  </image>
+                  <HBox.margin>
+                     <Insets bottom="10.0" left="10.0" top="10.0" />
+                  </HBox.margin>
+               </ImageView>
+               <VBox>
+                  <children>
+                     <Text fx:id="txtNamaMahasiswa" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Mahasiswa1">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Text>
+                     <HBox>
+                        <children>
+                           <Text fx:id="txtNimMahasiswa" strokeType="OUTSIDE" strokeWidth="0.0" text="NIM" />
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                           <Text fx:id="txtJurusanMahasiswa" strokeType="OUTSIDE" strokeWidth="0.0" text="Jurusan" />
+                        </children>
+                     </HBox>
+                     <HBox spacing="5.0" />
+                     <HBox spacing="5.0" />
+                  </children>
+                  <HBox.margin>
+                     <Insets bottom="10.0" left="10.0" top="10.0" />
+                  </HBox.margin>
+               </VBox>
+            </children>
+         </HBox>
+      </children>
+   </VBox>
+   <HBox alignment="TOP_RIGHT" spacing="10.0" style="-fx-opacity: 70%;">
+      <children>
+         <ImageView fitHeight="15.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/calendar-biru.png" />
+            </image>
+            <HBox.margin>
+               <Insets right="-5.0" top="2.0" />
+            </HBox.margin>
+         </ImageView>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Diajukan:" />
+         <Text fx:id="txtTanggalPengajuan" layoutX="384.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal" />
+      </children>
+   </HBox>
+   <VBox prefHeight="39.0" prefWidth="447.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: grey;">
+      <children>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: 70%;" text="Judul Skripsi:">
+            <VBox.margin>
+               <Insets bottom="10.0" left="10.0" top="10.0" />
+            </VBox.margin>
+         </Text>
+         <Text fx:id="txtJudulSkripsi" strokeType="OUTSIDE" strokeWidth="0.0" text="“Pengaruh Game Roblox Terhadap Mental Anak Dibawah Umur”">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" left="10.0" top="-5.0" />
+            </VBox.margin>
+         </Text>
+      </children>
+   </VBox>
+   <Region prefHeight="7.0" prefWidth="423.0" />
+   <HBox prefHeight="50.0" prefWidth="423.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: grey;">
+      <children>
+         <VBox prefHeight="7.0" prefWidth="36.0" style="-fx-background-color: #edf7ed;">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" top="10.0" />
+            </HBox.margin>
+            <children>
+               <ImageView fitHeight="36.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/file-green.png" />
+                  </image>
+                  <VBox.margin>
+                     <Insets left="5.0" top="3.0" />
+                  </VBox.margin>
+               </ImageView>
+            </children>
+         </VBox>
+         <VBox>
+            <children>
+               <Text fx:id="txtFileSkripsi" strokeType="OUTSIDE" strokeWidth="0.0" text="Proposal Skripsi.pdf">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Text>
+               <HBox spacing="30.0" />
+            </children>
+            <HBox.margin>
+               <Insets top="7.0" />
+            </HBox.margin>
+         </VBox>
+         <VBox prefHeight="21.0" prefWidth="34.0" style="-fx-background-color: #009201;">
+            <children>
+               <ImageView fx:id="ivDownloadFileSkripsi" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/save.png" />
+                  </image>
+                  <VBox.margin>
+                     <Insets left="6.0" top="7.0" />
+                  </VBox.margin>
+               </ImageView>
+            </children>
+            <HBox.margin>
+               <Insets bottom="10.0" left="170.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </VBox>
+      </children>
+   </HBox>
+   <Line endX="323.29290771484375" endY="-2.278174877166748" startX="-100.0" />
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: 70%;" text="Unduh dan review semua dokumen sebelum memberikan keputusan">
+      <font>
+         <Font size="10.0" />
+      </font>
+      <VBox.margin>
+         <Insets left="50.0" top="-10.0" />
+      </VBox.margin>
+   </Text>
+   <Region prefHeight="14.0" prefWidth="426.0" />
+   <HBox alignment="TOP_CENTER" spacing="20.0">
+      <children>
+         <Button fx:id="btnTolakPengajuan" onAction="#tolakPengajuan" mnemonicParsing="false" prefHeight="33.0" prefWidth="161.0" style="-fx-background-color: red; -fx-background-radius: 20; -fx-font-weight: bold;" text="Tolak Pengajuan" textFill="WHITE" />
+         <Button fx:id="btnSetujuiPengajuan" onAction="#setujuiPengajuan" mnemonicParsing="false" prefHeight="33.0" prefWidth="161.0" style="-fx-background-color: #009201; -fx-background-radius: 20; -fx-font-weight: bold;" text="Setujui Pengajuan" textFill="WHITE" />
+      </children>
+   </HBox>
+</VBox>

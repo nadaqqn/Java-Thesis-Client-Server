@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="app.controllers.ModalDetailDosenController"
+            prefWidth="400" prefHeight="350" style="-fx-background-color: white; -fx-background-radius: 10;">
+    
+    <children>
+        <GridPane layoutX="20" layoutY="20" hgap="10" vgap="10">
+            <children>
+                <Text text="Nama:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <Text fx:id="txtNama" GridPane.rowIndex="0" GridPane.columnIndex="1" style="-fx-font-weight: bold;" />
+
+                <Text text="Prodi:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <Text fx:id="txtProdi" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-font-weight: bold;" />
+
+                <Text text="No. Telp:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <Text fx:id="txtNoTelp" GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-font-weight: bold;" />
+
+                <Text text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                <Text fx:id="txtEmail" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-font-weight: bold;" />
+
+                <Text text="Foto:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                <ImageView fx:id="imgFoto" GridPane.rowIndex="4" GridPane.columnIndex="1" fitWidth="80" fitHeight="80" />
+            </children>
+        </GridPane>
+
+        <Button     fx:id="btnClose" text="Tutup" layoutX="150" layoutY="300" prefWidth="100"
+                style="-fx-background-color: #ebb543; -fx-font-weight: bold;"
+                onAction="#closeModal" />
+    </children>
+</AnchorPane>

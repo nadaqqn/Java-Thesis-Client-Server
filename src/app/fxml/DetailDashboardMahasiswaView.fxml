@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.DetailDashboardMahasiswaViewController">
+
+    <children>
+
+        <!-- Background Image -->
+        <ImageView fx:id="bgImage" preserveRatio="false">
+            <image>
+                <Image url="@../images/bg.png" />
+            </image>
+            <fitWidth>1280</fitWidth>
+            <fitHeight>720</fitHeight>
+            <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+            <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+            <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+            <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+        </ImageView>
+      <AnchorPane fx:id="navbarContainer" layoutX="0" layoutY="0" prefHeight="68.0" prefWidth="1280.0" />
+      <Hyperlink fx:id="kembaliLink" layoutX="50.0" layoutY="100.0" style="-fx-font-weight: bold;" text="⭠ Kembali" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <VBox alignment="TOP_RIGHT" layoutX="50.0" layoutY="175.0" prefHeight="260.0" prefWidth="359.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <StackPane alignment="TOP_RIGHT" prefHeight="154.0" prefWidth="359.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#253a80" height="30.0" stroke="BLACK" strokeType="INSIDE" width="147.0">
+                     <StackPane.margin>
+                        <Insets top="20.0" />
+                     </StackPane.margin>
+                  </Rectangle>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Dosen Pembimbing">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets right="8.0" top="25.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="txtNamaDosen" layoutX="220.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Nama Dosen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets top="70.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="txtProdiDosen" layoutX="265.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets top="100.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="txtNoTelpDosen" layoutX="273.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Telp Dosen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets top="130.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="txtEmailDosen" layoutX="257.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Dosen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets top="160.0" />
+                     </StackPane.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets right="20.0" />
+               </VBox.margin>
+            </StackPane>
+            <Button fx:id="btnCekProfil" mnemonicParsing="false" onAction="#showDosenModal" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #ebb543; -fx-background-radius: 10%; -fx-font-weight: bold;" text="Cek Profil" textFill="WHITE">
+               <VBox.margin>
+                  <Insets right="120.0" top="16.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </VBox>
+      <ImageView fitHeight="179.0" fitWidth="189.0" layoutX="37.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 20%;">
+         <image>
+            <Image url="@../images/logo-bulet.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#253a80" layoutX="135.0" layoutY="303.0" radius="64.0" stroke="BLACK" strokeType="INSIDE" />
+      <VBox alignment="TOP_CENTER" layoutX="546.0" layoutY="101.0" prefHeight="540.0" prefWidth="681.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Isi Data Berikut">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ketelitian No 1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+            
+            <VBox prefHeight="368.0" prefWidth="681.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Skripsi *">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtJudulSkripsi" prefHeight="32.0" prefWidth="621.0" promptText="Masukkan Judul Skripsi" />
+                  <Region prefHeight="18.0" prefWidth="621.0" />
+                  <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Metode Penelitian *">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtMetodePenelitian" layoutX="10.0" layoutY="30.0" prefHeight="32.0" prefWidth="621.0" promptText="Masukkan Metode Penelitian" />
+                  <Region layoutX="10.0" layoutY="62.0" prefHeight="18.0" prefWidth="621.0" />
+                  <Text layoutX="10.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deskripsi Singkat Penelitian *">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtDeskripsi" layoutX="10.0" layoutY="100.0" prefHeight="60.0" prefWidth="621.0" promptText="Jelaskan Secara singkat tentang penelitian yang akan dilakukan (minimal 50 karakter)" />
+                  <Region layoutX="10.0" layoutY="62.0" prefHeight="18.0" prefWidth="621.0" />
+                  <Text layoutX="10.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tujuan Penelitian *">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtTujuan" layoutX="10.0" layoutY="100.0" prefHeight="32.0" prefWidth="621.0" promptText="Jelaskan Tujuan dari Penelitian Ini" />
+                  <Region layoutX="10.0" layoutY="247.0" prefHeight="18.0" prefWidth="621.0" />
+                  <Text layoutX="10.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload Dokumen Proposal *">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnUpload" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Pilih File" />
+                  <Text fx:id="txtFileName" text="Belum ada file yang dipilih" wrappingWidth="300" />
+
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox spacing="70.0">
+               <children>
+                  <Button fx:id="btnBatal" mnemonicParsing="false" onAction="#handleBatal" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: grey; -fx-background-radius: 10%; -fx-font-weight: bold;" text="Batal" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAjukan" mnemonicParsing="false" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: red; -fx-background-radius: 10%; -fx-font-weight: bold;" text="Ajukan" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="190.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="txtFormBelumLengkap" fill="RED" text="Form belum lengkap!" wrappingWidth="140.0" />
+            <Text fx:id="txtFileBelumDiupload" fill="RED" layoutX="281.0" layoutY="497.0" text="File skripsi belum diupload!" wrappingWidth="147.0" />
+            <Text fx:id="txtSudahMemilikiDosenPembimbing" fill="RED" layoutX="277.0" layoutY="514.0" text="Anda sudah memiliki 2 dosen pembimbing yang menyetujui!" wrappingWidth="353.0" />
+            <Text fx:id="txtSudahMengajukanSkripsi" fill="RED" layoutX="174.0" layoutY="529.0" text="Anda telah mengajukan skripsi kepada 2 dosen pembimbing. Silakan menunggu persetujuan." textAlignment="CENTER" wrappingWidth="353.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+            <Text fx:id="txtJudulSkripsiHarusSama" fill="RED" layoutX="174.0" layoutY="521.0" text="Judul skripsi harus sama dengan pengajuan sebelumnya" textAlignment="CENTER" wrappingWidth="353.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <ImageView fx:id="txtFotoDosen" fitHeight="92.0" fitWidth="92.0" layoutX="90.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox alignment="TOP_RIGHT" layoutX="50.0" layoutY="446.0" prefHeight="157.0" prefWidth="383.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-opacity: 30%;">
+         <children>
+            <StackPane alignment="TOP_CENTER" prefHeight="154.0" prefWidth="361.0">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Informasi Penting">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- Pengajuan akan direview oleh dosen dalam 1-3 hari kerja">
+                     <StackPane.margin>
+                        <Insets top="40.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text layoutX="25.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Pastikan semua data yang diisi sudah benar dan lengkap">
+                     <StackPane.margin>
+                        <Insets top="60.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text layoutX="25.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Anda akan menerima notifikasi email setelah pengajuan disetujui">
+                     <StackPane.margin>
+                        <Insets top="80.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text layoutX="26.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Dokumen proposal yang diupload akan dijadikan acuan bimbingan">
+                     <StackPane.margin>
+                        <Insets top="100.0" />
+                     </StackPane.margin>
+                  </Text>
+               </children>
+            </StackPane>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </VBox>
+
+    </children>
+</AnchorPane>

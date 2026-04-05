@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.DashboardAdminViewController">
+
+    <children>
+
+        <!-- Background Image -->
+        <ImageView fx:id="bgImage" preserveRatio="false">
+            <image>
+                <Image url="@../images/bg-grey.png" />
+            </image>
+            <fitWidth>1280</fitWidth>
+            <fitHeight>720</fitHeight>
+            <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+            <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+            <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+            <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+        </ImageView>
+
+        <!-- Header Blue Shape -->
+        <Rectangle fx:id="headerShape" arcHeight="20" arcWidth="20" fill="#8d8d8d" height="207.0" layoutY="-25.0" width="1280.0" AnchorPane.topAnchor="-25.0" />
+
+                          <!-- Header Text -->
+        <VBox fx:id="header" alignment="BOTTOM_CENTER" layoutY="76.0" prefHeight="128.0" prefWidth="1270.0" spacing="5" style="-fx-background-color: #8d8d8d; -fx-background-radius: 35;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Text fill="WHITE" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Hi, Admin!">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+                <Text fill="white" style="-fx-font-size: 14;" text="Semangat selalu!" />
+            </children>
+         <padding>
+            <Insets bottom="60.0" left="40.0" right="1103.0" />
+         </padding>
+        </VBox>
+
+        
+        <AnchorPane fx:id="navbarContainer" layoutX="0" layoutY="0" prefHeight="68.0" prefWidth="1280.0" />
+
+        <!-- Search Bar -->
+        <HBox layoutX="29.0" layoutY="160" prefHeight="35.0" prefWidth="1203.0" spacing="10" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <children>
+                <Label style="-fx-font-size: 16;" text="🔍" />
+                <TextField prefHeight="25.0" prefWidth="201.0" promptText="Cari dosen pembimbing kamu" style="-fx-background-color: transparent;" />
+            </children>
+
+            <padding>
+                <Insets bottom="5" left="10" right="10" top="5" />
+            </padding>
+        </HBox>
+      <Text layoutX="71.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ringkasan data sistem akademik">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <HBox layoutX="50.0" layoutY="242.0" prefHeight="65.0" prefWidth="223.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <VBox alignment="CENTER_LEFT">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: 70%;" text="Total Mahasiswa">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="txtTotalMahasiswa" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="1,462">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </VBox>
+            <ImageView fitHeight="48.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/toga-green.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="300.0" layoutY="242.0" prefHeight="65.0" prefWidth="223.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <VBox alignment="CENTER_LEFT">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: 70%;" text="Total Dosen">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="txtTotalDosen" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="35">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </VBox>
+            <ImageView fitHeight="48.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user-green.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="80.0" top="7.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="550.0" layoutY="242.0" prefHeight="65.0" prefWidth="223.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <VBox alignment="CENTER_LEFT">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: 70%;" text="Mahasiswa Lulus">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="txtMahasiswaLulus" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="213">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </VBox>
+            <ImageView fitHeight="48.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/medali.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="55.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="71.0" layoutY="389.0" spacing="40.0">
+         <children>
+            <VBox prefHeight="276.0" prefWidth="544.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: grey; -fx-border-radius: 10;">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <children>
+                  <HBox spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="37.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/note-merah.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Aktivitas Terbaru">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aktivitas mahasiswa dan dosen" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ScrollPane prefHeight="232.0" prefWidth="542.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="538.0" style="-fx-background-color: white;">
+                           <children>
+                              <HBox prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox prefHeight="32.0" prefWidth="467.0">
+                                       <children>
+                                          <Text fx:id="log1" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Anjeli Bergabung Sebagai Mahasiswa" />
+                                          <Text fx:id="jenis_log1" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Mahasiswa" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutY="52.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log2" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Hendi Pratama pengajuan ke Adinda S.Kom., M.Kom" />
+                                          <Text fx:id="jenis_log2" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengajuan" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutY="104.0" prefHeight="54.0" prefWidth="520.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log3" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Wanka Marul pengajuan ke Chyntia S.Kom., M.Kom" wrappingWidth="468.6087341308594" />
+                                          <Text fx:id="jenis_log3" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengajuan" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutY="156.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log4" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Salsabita S.Kom., M.Kom Bergabung Sebagai Dosen" />
+                                          <Text fx:id="jenis_log4" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Dosen" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutY="208.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log5" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Salsabita S.Kom., M.Kom Bergabung Sebagai Dosen" />
+                                          <Text fx:id="jenis_log5" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Dosen" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutY="260.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log6" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Salsabita S.Kom., M.Kom Bergabung Sebagai Dosen" />
+                                          <Text fx:id="jenis_log6" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Dosen" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutY="312.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log7" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Salsabita S.Kom., M.Kom Bergabung Sebagai Dosen" />
+                                          <Text fx:id="jenis_log7" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Dosen" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutY="364.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log8" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Salsabita S.Kom., M.Kom Bergabung Sebagai Dosen" />
+                                          <Text fx:id="jenis_log8" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Dosen" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutY="416.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log9" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Salsabita S.Kom., M.Kom Bergabung Sebagai Dosen" />
+                                          <Text fx:id="jenis_log9" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Dosen" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutY="468.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log10" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Salsabita S.Kom., M.Kom Bergabung Sebagai Dosen" />
+                                          <Text fx:id="jenis_log10" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Dosen" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutY="520.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log11" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Salsabita S.Kom., M.Kom Bergabung Sebagai Dosen" />
+                                          <Text fx:id="jenis_log11" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Dosen" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutY="572.0" prefHeight="54.0" prefWidth="530.0" spacing="10.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/dot.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <VBox>
+                                       <children>
+                                          <Text fx:id="log12" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Salsabita S.Kom., M.Kom Bergabung Sebagai Dosen" />
+                                          <Text fx:id="jenis_log12" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Dosen" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <VBox layoutX="15.0" layoutY="10.0" prefHeight="200.0" prefWidth="544.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: grey; -fx-border-radius: 10;">
+               <children>
+                  <HBox spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="37.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/kuotadosen.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kuota Bimbingan Dosen">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen menerima 12 mahasiswa Pertahun" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ScrollPane prefHeight="224.0" prefWidth="542.0" style="-fx-background-color: white;">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="534.0" style="-fx-background-color: white;">
+                           <children>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <VBox fx:id="CardDosen1">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="499.0" minWidth="10.0" prefWidth="398.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="1.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen1" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Wankamarul, M.Kom" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen1" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen1" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen2" layoutX="10.0" layoutY="20.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="399.0" minWidth="10.0" prefWidth="399.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen2" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Hendi, M.Kom" />
+                                                <HBox prefHeight="16.0" prefWidth="134.0" spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen2" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen2" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen3" layoutX="10.0" layoutY="62.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="400.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen3" strokeType="OUTSIDE" strokeWidth="0.0" text="Salsabila, M.Kom" GridPane.rowIndex="1" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen3" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen3" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen4" layoutX="10.0" layoutY="104.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="399.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen4" strokeType="OUTSIDE" strokeWidth="0.0" text="Anjeli, M.Kom" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen4" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen4" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen5" layoutX="10.0" layoutY="146.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="398.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen5" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Wankamarul, M.Kom" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen5" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen5" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen6" layoutX="10.0" layoutY="188.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="405.0" minWidth="10.0" prefWidth="395.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen6" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Wankamarul, M.Kom" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen6" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen6" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen7" layoutX="10.0" layoutY="209.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="399.0" minWidth="10.0" prefWidth="399.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen7" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Wankamarul, M.Kom" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen7" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen7" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen8" layoutX="10.0" layoutY="214.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="409.0" minWidth="10.0" prefWidth="409.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="101.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen8" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Wankamarul, M.Kom" />
+                                                <HBox prefHeight="0.0" prefWidth="101.0" spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen8" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen8" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen9" layoutX="10.0" layoutY="307.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="399.0" minWidth="10.0" prefWidth="399.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen9" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Wankamarul, M.Kom" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen9" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen9" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen10" layoutX="10.0" layoutY="348.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="404.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen10" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Wankamarul, M.Kom" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen10" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen10" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen11" layoutX="10.0" layoutY="389.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="401.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="101.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen11" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Wankamarul, M.Kom" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen11" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen11" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="CardDosen12" layoutX="10.0" layoutY="430.0">
+                                       <children>
+                                          <GridPane prefHeight="0.0" prefWidth="500.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="389.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="97.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="txtNamaDosen12" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof. Dr. Ir. Wankamarul, M.Kom" />
+                                                <HBox spacing="5.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text fx:id="txtJumlahMahasiswaBimbinganDosen12" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mahasiswa" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ProgressBar fx:id="pbDosen12" prefHeight="15.0" prefWidth="500.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+    </children>
+</AnchorPane>

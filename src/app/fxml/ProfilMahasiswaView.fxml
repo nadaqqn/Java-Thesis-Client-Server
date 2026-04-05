@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.ProfilMahasiswaViewController">
+
+    <children>
+
+              <!-- Background Image -->
+        <ImageView fx:id="bgImage" preserveRatio="false">
+            <image>
+                <Image url="@../images/bg.png" />
+            </image>
+            <fitWidth>1280</fitWidth>
+            <fitHeight>720</fitHeight>
+            <AnchorPane.topAnchor>0.0</AnchorPane.topAnchor>
+            <AnchorPane.bottomAnchor>0.0</AnchorPane.bottomAnchor>
+            <AnchorPane.leftAnchor>0.0</AnchorPane.leftAnchor>
+            <AnchorPane.rightAnchor>0.0</AnchorPane.rightAnchor>
+        </ImageView>
+
+      <AnchorPane fx:id="navbarContainer" layoutX="0" layoutY="0" prefHeight="68.0" prefWidth="1280.0" />
+
+      <VBox alignment="TOP_RIGHT" layoutX="33.0" layoutY="140.0" prefHeight="171.0" prefWidth="441.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <HBox spacing="30.0" style="-fx-background-radius: 50;">
+               <children>
+                  <StackPane>
+                     <children>
+                        <ImageView fitHeight="180.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 30%;">
+                           <image>
+                              <Image url="@../images/logo-bulet.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="-15.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="168.0" prefWidth="182.0" spacing="13.0">
+                     <children>
+                        <Text fx:id="txtNamaMahasiswa" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Nama Mahasiswa1" wrappingWidth="161.82521057128906">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtNIMMahasiswa" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="NIM Mahasiswa1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="-5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox>
+                           <children>
+                              <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/phone.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="txtNoTelpMahasiswa" strokeType="OUTSIDE" strokeWidth="0.0" text="No Telp Mahasiswa1">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="2.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox spacing="4.0">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/mail.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="txtEmailMahasiswa" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Mahasiswa1" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="btnEditProfil" mnemonicParsing="false" onAction="#showEditProfilMahasiswaModal" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: white; -fx-border-color: #253a80;" text="Edit Profil" textFill="#253a80">
+                           <VBox.margin>
+                              <Insets top="-5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="33.0" layoutY="370.0" prefHeight="271.0" prefWidth="440.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <HBox alignment="TOP_CENTER" prefWidth="440.0">
+               <children>
+                  <ImageView fitHeight="46.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/book.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Progress Skripsi">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox>
+               <children>
+                  <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Judul Skripsi:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <StackPane alignment="TOP_LEFT" prefHeight="51.0" prefWidth="420.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;">
+                     <children>
+                        <Text fx:id="txtJudulSkripsi" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Skripsi">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                  </StackPane>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox spacing="40.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Text fx:id="txtProsesPembimbing1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Proses Pembimbing1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <HBox alignment="TOP_RIGHT" spacing="2.0">
+                           <children>
+                              <Text fx:id="txtJumlahPertemuanDosen1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="6 Sesi">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <ProgressBar fx:id="progressPembimbing1" prefHeight="18.0" prefWidth="178.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ProgressBar>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Text fx:id="txtProsesPembimbing11" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Proses Pembimbing2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <HBox alignment="TOP_RIGHT" spacing="2.0">
+                           <children>
+                              <Text fx:id="txtJumlahPertemuanDosen2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="6 Sesi">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <ProgressBar fx:id="progressPembimbing2" prefHeight="18.0" prefWidth="178.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ProgressBar>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox spacing="36.0">
+               <children>
+                    <VBox fx:id="vbProgressBimbingan1" alignment="CENTER" prefHeight="64.0" prefWidth="179.0" style="-fx-background-color: #c7e7c7; -fx-background-radius: 10;">
+                     <children>
+                        <!-- Dosbing 1 -->
+                          <Text fx:id="txtTotalJumlahPertemuan" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="0">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                          <Text fx:id="txtLabelBimbingan1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Bimbingan Selesai">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbProgressBimbingan2" alignment="CENTER" prefHeight="64.0" prefWidth="183.0" style="-fx-background-color: #d2daff; -fx-background-radius: 10;">
+                     <children>
+                  
+                          <!-- Dosbing 2 -->
+                          <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="12">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                          <Text fx:id="txtLabelBimbingan2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Target">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Text>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="576.0" layoutY="140.0" prefHeight="188.0" prefWidth="658.0" spacing="10.0" style="-fx-background-color: WHITE; -fx-background-radius: 20;">
+         <children>
+            <HBox prefHeight="81.0" prefWidth="567.0" spacing="20.0" style="-fx-background-color: #d2daff; -fx-background-radius: 10;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fx:id="ivDosen1" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/fotoDosen/dosen1.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox spacing="3.0">
+                     <children>
+                        <StackPane prefHeight="24.0" prefWidth="104.0" style="-fx-background-color: #b1bfff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Pembimbing 1" wrappingWidth="84.541015625" />
+                           </children>
+                        </StackPane>
+                        <Text fx:id="txtNamaDosenPembimbing1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Hendi S.kom M.kom">
+                           <VBox.margin>
+                              <Insets top="3.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox spacing="3.0">
+                           <children>
+                              <Text fx:id="txtDosenPembimbing1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                              <Text fx:id="txtProdiDosenPembimbing1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Informatika" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="81.0" prefWidth="626.0" spacing="20.0" style="-fx-background-color: #d2daff; -fx-background-radius: 10;">
+               <children>
+                  <ImageView fx:id="ivDosen2" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/fotoDosen/dosen3.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox spacing="3.0">
+                     <children>
+                        <StackPane prefHeight="24.0" prefWidth="104.0" style="-fx-background-color: #b1bfff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Pembimbing 2" wrappingWidth="84.541015625" />
+                           </children>
+                           <VBox.margin>
+                              <Insets right="25.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <Text fx:id="txtNamaDosenPembimbing2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Chyntya S.Kom., M.Kom.">
+                           <VBox.margin>
+                              <Insets top="3.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox spacing="3.0">
+                           <children>
+                              <Text fx:id="txtDosenPembimbing2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dosen" />
+                              <Text fx:id="txtProdiDosenPembimbing2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Bisnis Digital" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="577.0" layoutY="370.0" prefHeight="271.0" prefWidth="659.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <HBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/calendar-biru.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Timeline Akademik">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Text fx:id="txtBimbingan" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Jadwal bimbingan akan ditampilkan setelah dijadwalkan oleh dosen pembimbing">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ScrollPane prefHeight="200.0" prefWidth="488.0" style="-fx-background-color: white;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="1450.0" style="-fx-background-color: white;">
+                     <children>
+                        <StackPane layoutX="13.0" prefHeight="166.0" prefWidth="1214.0">
+                           <children>
+                              <ProgressBar fx:id="pbPertemuanBimbingan" prefHeight="18.0" prefWidth="1223.0" progress="0.2" />
+                              <HBox>
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="-10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan Proposal" wrappingWidth="80.0">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="-10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="-10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Circle fx:id="circleDot1" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </Circle>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="60.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status2">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan2 " wrappingWidth="80.0">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal2">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Circle fx:id="circleDot2" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin></Circle>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan3" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status3">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan3" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan3" wrappingWidth="80.0">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan3" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal3">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Circle fx:id="circleDot3" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin></Circle>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="449.0" layoutY="10.0" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan4" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status4">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan4" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan4" wrappingWidth="80.0">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan4" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal4">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Circle fx:id="circleDot4" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="504.0" layoutY="10.0" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan5" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status5">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan5" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan5">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan5" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal5">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Circle fx:id="circleDot5" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="537.0" layoutY="10.0" prefHeight="96.0" prefWidth="160.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan6" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status6">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan6" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan6">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan6" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal6">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Circle fx:id="circleDot6" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="559.0" layoutY="10.0" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan7" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status7">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan7" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan7">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan7" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal7">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Circle fx:id="circleDot7" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="574.0" layoutY="10.0" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan8" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status8">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan8" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan8">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan8" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal8">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Circle fx:id="circleDot8" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="40.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="586.0" layoutY="10.0" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan9" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status9">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan9" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan9">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan9" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal9">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Circle fx:id="circleDot9" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="40.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="595.0" layoutY="10.0" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan10" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status10">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan10" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan10">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan10" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal10">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Circle fx:id="circleDot10" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="603.0" layoutY="10.0" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan11" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status11">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan11" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan11">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan11" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal11">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Circle fx:id="circleDot11" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="609.0" layoutY="10.0" prefHeight="96.0" prefWidth="150.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="txtStatusBimbinganPertemuan12" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Status1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtJudulBimbinganPertemuan12" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kegiatan1">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="txtTanggalBimbinganPertemuan12" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Circle fx:id="circleDot12" fill="#009201" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets bottom="70.0" left="40.0" />
+                                 </StackPane.margin>
+                              </HBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <Hyperlink fx:id="kembaliLink" layoutX="1126.0" layoutY="657.0" text="&lt; Kembali" textFill="WHITE" />
+      <ImageView fx:id="ivMahasiswa" fitHeight="110.0" fitWidth="110.0" layoutX="63.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fotoMahasiswa/mahasiswa1.png" />
+         </image>
+      </ImageView>
+
+    </children>
+</AnchorPane>

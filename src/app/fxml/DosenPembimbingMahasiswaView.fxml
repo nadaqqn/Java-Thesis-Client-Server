@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.DosenPembimbingMahasiswaViewController">
+
+    <children>
+
+        <!-- Background Image -->
+        <ImageView fx:id="bgImage" preserveRatio="false">
+            <image>
+                <Image url="@../images/bg.png" />
+            </image>
+            <fitWidth>1280</fitWidth>
+            <fitHeight>720</fitHeight>
+            <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+            <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+            <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+            <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+        </ImageView>
+        
+        <AnchorPane fx:id="navbarContainer" layoutX="0" layoutY="0" prefHeight="68.0" prefWidth="1280.0" />
+
+
+      <HBox alignment="CENTER" layoutX="180.0" layoutY="80.0" spacing="60.0">
+         <children>
+            <VBox prefHeight="271.0" prefWidth="474.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <HBox.margin>
+                  <Insets bottom="-15.0" left="-40.0" />
+               </HBox.margin>
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="20.0">
+                     <children>
+                        <ImageView fx:id="ivDosen1" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <VBox prefHeight="34.0" prefWidth="119.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                                 <children>
+                                    <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD;" text="Pembimbing 1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <Text fx:id="txtNamaDosen1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Nama Dosen1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtProdiDosen1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Bidang Keahlian :">
+                     <VBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox spacing="20.0">
+                     <children>
+                        <VBox prefHeight="19.0" prefWidth="92.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #e6ebff; -fx-border-width: 2;">
+                           <children>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Commerce">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="21.0" prefWidth="113.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #e6ebff; -fx-border-width: 2;">
+                           <children>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Marketer">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="21.0" prefWidth="122.0" style="-fx-background-color: white; -fx-border-color: #e6ebff; -fx-border-width: 2;">
+                           <children>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Business Analysis">
+                                 <VBox.margin>
+                                    <Insets left="12.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="434.0" spacing="10.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                     <children>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/calendar-biru.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Jadwal Bimbingan Selanjutnya: " />
+                        <HBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Text fx:id="txtTanggalBimbinganPertemuanDosen1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="-" />
+                                    <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="," />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="txtJamBimbinganPertemuanDosen1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="-" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Proses: ">
+                           <HBox.margin>
+                              <Insets right="310.0" top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fx:id="txtJumlahPertemuanDosen1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#253a80" layoutX="51.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#253a80" layoutX="58.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#253a80" layoutX="63.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sesi">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ProgressBar fx:id="pbDosen1" prefHeight="18.0" prefWidth="431.0">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </ProgressBar>
+                  <HBox spacing="40.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#loadPesan" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #5170ff; -fx-font-weight: bold;" text="           Pesan" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/mail-putih.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#loadJadwal" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #5170ff; -fx-font-weight: bold;" text="Jadwal" textFill="WHITE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="-30.0" layoutY="10.0" prefHeight="257.0" prefWidth="474.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="20.0">
+                     <children>
+                        <ImageView fx:id="ivDosen2" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fotoDosen/dosen3.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <VBox prefHeight="34.0" prefWidth="119.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                                 <children>
+                                    <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD;" text="Pembimbing 2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <Text fx:id="txtNamaDosen2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Nama Dosen2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtProdiDosen2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodi Dosen2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Bidang Keahlian :">
+                     <VBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox spacing="20.0">
+                     <children>
+                        <VBox prefHeight="19.0" prefWidth="92.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #e6ebff; -fx-border-width: 2;">
+                           <children>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Commerce">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="21.0" prefWidth="113.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #e6ebff; -fx-border-width: 2;">
+                           <children>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Marketer">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="21.0" prefWidth="122.0" style="-fx-background-color: white; -fx-border-color: #e6ebff; -fx-border-width: 2;">
+                           <children>
+                              <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Business Analysis">
+                                 <VBox.margin>
+                                    <Insets left="12.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="434.0" spacing="10.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                     <children>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/calendar-biru.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Jadwal Bimbingan Selanjutnya: " />
+                        <HBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Text fx:id="txtTanggalBimbinganPertemuanDosen2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="-" />
+                                    <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="," />
+                                 </children>
+                              </HBox>
+                              <Text fx:id="txtJamBimbinganPertemuanDosen2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="-" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Proses: ">
+                           <HBox.margin>
+                              <Insets right="310.0" top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fx:id="txtJumlahPertemuanDosen2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#253a80" layoutX="51.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#253a80" layoutX="58.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#253a80" layoutX="63.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sesi">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ProgressBar fx:id="pbDosen2" prefHeight="18.0" prefWidth="431.0">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </ProgressBar>
+                  <HBox spacing="40.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#loadPesan" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #5170ff; -fx-font-weight: bold;" text="           Pesan" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/mail-putih.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#loadJadwal" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #5170ff; -fx-font-weight: bold;" text="Jadwal" textFill="WHITE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="-15.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox layoutX="138.0" layoutY="363.0" prefHeight="321.0" prefWidth="1014.0" spacing="11.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/note.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="2.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Riwayat Bimbingan">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="9.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <ScrollPane prefHeight="277.0" prefWidth="1014.0" style="-fx-background-color: white;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="999.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox fx:id="CardBimbingan1" layoutX="15.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan1" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan1" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pada Bab I Ganti latar belakang dan juga pendahuluan karna semuanya mengcopas dari penelitian sebelumnya yang sudah diupload Pada Bab I Ganti latar belakang dan juga pendahuluan karna semuanya mengcopas dari penelitian sebelumnya yang sudah diupload" wrappingWidth="930.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan2" layoutX="15.0" layoutY="165.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan2" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan2" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan3" layoutX="15.0" layoutY="330.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan3" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan3" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan3" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan3" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan3" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan4" layoutX="15.0" layoutY="495.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan4" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan4" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan4" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan4" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan4" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan5" layoutX="15.0" layoutY="660.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan5" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan5" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan5" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan5" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan5" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan6" layoutX="15.0" layoutY="825.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan6" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan6" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan6" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan6" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan6" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan7" layoutX="15.0" layoutY="990.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan7" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan7" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan7" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan7" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan7" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan8" layoutX="15.0" layoutY="1155.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan8" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan8" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan8" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan8" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan8" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan9" layoutX="15.0" layoutY="1320.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan9" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan9" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan9" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan9" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan9" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan10" layoutX="15.0" layoutY="1485.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan10" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan10" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan10" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan10" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan10" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan11" layoutX="15.0" layoutY="1650.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan11" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan11" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan11" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan11" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan11" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="CardBimbingan12" layoutX="15.0" layoutY="1815.0" prefHeight="100.0" prefWidth="977.0" spacing="2.0" style="-fx-background-color: #e6ebff; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="txtJudulPertemuan12" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Diskusi proposal">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="2.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtBimbinganNamaDosenPertemuan12" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Hendi Prasetyo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="txtPertemuan12" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertemuan">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/calendar-biru.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txtTanggalBimbinganPertemuan12" fill="#253a80" strokeType="OUTSIDE" strokeWidth="0.0" text="2025-12-01">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane prefHeight="36.0" prefWidth="943.0">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="944.0">
+                                       <children>
+                                          <Text fx:id="txtCatatanPertemuan12" fill="#253a80" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Perlu penambahan referensi">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </ScrollPane>
+         </children>
+      </VBox>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="350.0" maxWidth="423.0" prefHeight="350" prefWidth="423.0" style="-fx-background-color: white; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.ModalKelolaProfilDosenAdminViewController">
+    
+    <children>
+        <GridPane hgap="10.0" layoutX="25.0" layoutY="64.0" prefHeight="201.0" prefWidth="368.0" vgap="10.0">
+            <children>
+                <Text text="Nama Dosen:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="tfNama" prefHeight="25.0" prefWidth="271.0" promptText="Masukkan nama dosen terbaru" GridPane.columnIndex="1" />
+
+                <Text text="Nip Dosen:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="tfNip" promptText="Masukkan nim dosen terbaru" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Text text="Prodi Dosen:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="tfProdi" promptText="Masukkan prodi dosen terbaru" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text layoutX="10.0" layoutY="98.0" text="Fakultas Dosen:" GridPane.rowIndex="3" />
+            <TextField fx:id="tfFakultas" layoutX="146.0" layoutY="80.0" promptText="Masukkan fakultas dosen terbaru" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      
+                <Text text="Umur Dosen:" GridPane.rowIndex="4" />
+            <TextField fx:id="tfUmur" prefHeight="25.0" prefWidth="243.0" promptText="Masukkan umur dosen terbaru" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Text text="No Telepon Dosen:" GridPane.rowIndex="5" />
+            <TextField fx:id="tfNoTelp" prefHeight="8.0" prefWidth="232.0" promptText="Masukkan no telepon dosen terbaru" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </TextField>
+            </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="20.0" />
+            <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="15.0" />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <Button fx:id="btnSimpanProfil" layoutX="150.0" layoutY="277.0" onAction="#simpanProfil" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #5170ff; -fx-font-weight: bold;" text="Simpan Profil" textFill="WHITE" />
+      <Text layoutX="25.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi," />
+      <Text layoutX="41.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin!" />
+      <Hyperlink layoutX="357.0" layoutY="11.0" onAction="#closeModal" style="-fx-font-weight: bold;" text="X" />
+      <Text fx:id="txtFormKosong" fill="RED" layoutX="127.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minimal isi 1 data untuk disimpan!" />
+      <Text layoutX="25.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Kelola Profil Dosen" />
+    </children>
+</AnchorPane>

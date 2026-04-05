@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="350" prefWidth="450.0" style="-fx-background-color: white; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.ModalRequestJadwalBimbinganMahasiswaController">
+    
+    <children>
+        <GridPane alignment="TOP_CENTER" hgap="10" layoutX="25.0" layoutY="84.0" prefHeight="197.0" prefWidth="394.0" vgap="10">
+            <children>
+                <Text text="Dosen Pembimbing*" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ComboBox fx:id="cbDosenPembimbing" prefHeight="25.0" prefWidth="253.0" promptText="Pilih Dosen Pembimbing yang Dituju" GridPane.columnIndex="1" />
+
+                <Text text="Topik*" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="tfTopik" promptText="Masukkan Topik Bimbingan" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Text text="Ruangan*" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="tfRuangan" promptText="Masukkan Ruangan Bimbingan" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Text text="Tanggal*" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dpTanggal" prefHeight="25.0" prefWidth="251.0" promptText="Masukkan Tanggal Bimbingan" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text layoutX="10.0" layoutY="101.0" text="Jam*" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cbJam" prefHeight="25.0" prefWidth="252.0" promptText="Masukkan Jam Bimbingan" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+         <columnConstraints>
+            <ColumnConstraints maxWidth="117.0" minWidth="110.0" prefWidth="117.0" />
+            <ColumnConstraints maxWidth="258.0" minWidth="251.0" prefWidth="251.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <Button fx:id="btnKirim" layoutX="145.0" layoutY="281.0" onAction="#KirimRequestBimbingan" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: #ebb543; -fx-font-weight: bold;" text="Kirim Request Bimbingan" />
+      <Text fill="#253a80" layoutX="23.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Hi,">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text fx:id="txtNamaMahasiswa" fill="#253a80" layoutX="48.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Mahasiswa!">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Hyperlink layoutX="403.0" layoutY="19.0" onAction="#closeModal" style="-fx-font-weight: bold;" text="X" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="23.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/calendar-biru.png" />
+         </image>
+      </ImageView>
+      <Text fill="#253a80" layoutX="55.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Request Jadwal Bimbingan">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
